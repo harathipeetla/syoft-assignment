@@ -1,0 +1,92 @@
+.signUp-page-container{
+    display: flex;
+    height: 100vh;
+
+}
+
+.left-section{
+    width: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.left-section h1{
+    font-size: 32px;
+    font-family: "Roboto";
+}
+
+.error-msg{
+    color: red;
+}
+
+.register-error{
+    color: red;
+    font-size: 22px;
+}
+
+.right-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12em;
+}
+
+.right-section label {
+    color: #131213;
+    font-size: 12px;
+    font-weight: 500
+}
+
+.right-section .have-account{
+    color: #0a0a0a;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.right-section input{
+    padding: 12px 24px 12px 24px;
+}
+
+.right-section button{
+    padding: 12px 20px 12px 20px;
+    border: none;
+    background-color: #131213;
+    color: #FFF;
+    font-size: 12px;
+    border-radius: 6px;
+    margin-top: 2em;
+    cursor: pointer;
+}
+@media  (max-width:599px) {
+    
+    .signUp-page-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .right-section{
+        margin: 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px){
+    .signUp-page-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .right-section{
+        margin: 0;
+    }
+}

@@ -1,0 +1,21 @@
+.table-row{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    border: 1px solid #cbd5e1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.transaction-text{
+    color: #475569;
+    font-style: 18px;
+    width: 32%;
+}
+
+.delete-container button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
