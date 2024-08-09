@@ -9,6 +9,12 @@ state ={
     user: JSON.parse(localStorage.getItem('user'))
 }
 
+ handleLogOut=()=>{
+    localStorage.removeItem('user')
+    const {history} = this.props 
+    history.replace('/login')
+ }
+
 
     render(){
         const {user} = this.state 
@@ -17,12 +23,23 @@ state ={
         }
         return(
             <div className="dashboard">
-                <div>
-                    <h1>Welcome , {user.user_firstname} {user.user_lastname}</h1>
+                 <h1>Welcome , {user.user_firstname}</h1>
+                 <p><strong>Here is your full details</strong></p>
+                <div className="details-dashboard">
+                   <div>
+                        <p><strong>Your FirstName: {''}</strong>{user.user_firstname}</p>
+                        <p><strong>Your LastName: {''}</strong>{user.user_lastname}</p>
+                   </div>
+                  <div>
+                    <p><strong>Your Password: {''}</strong>{user.user_password}</p>
+                    <p><strong>Your Number: {''}</strong>{user.user_phone}</p>
+                  </div>
+                   
                 </div>
+                <button type="button" onClick={this.handleLogOut} >Logout</button>
                <MoneyManager/>
 
-            </div>
+            </div> 
         )
     }
 }

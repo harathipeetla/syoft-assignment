@@ -1,4 +1,24 @@
 .dashboard{
     margin: 2em;   
-    width: 100%; 
+    width: 100vw; 
+    text-align: center;
+    overflow: hidden;
+}
+
+
+
+.dashboard button{
+    padding: 12px 24px 12px 24px;
+    border: none;
+    border-radius: 8px;
+    color: White;
+    background-color: black;
+    margin-bottom: 2em;
+
+}
+
+.details-dashboard{
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-around;
 }

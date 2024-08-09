@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #474545;
+    background-color: #0c0c0c;
     color: #FFF;
     width: 100vw;
     height: 100vh;
@@ -11,6 +11,11 @@
 
 .login-page-container input{
     padding: 12px 24px 12px 24px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background-color: #0c0c0c;
+    color: white;
 }
 
 .login-page-container label{
@@ -35,4 +40,6 @@
     font-size: 18px;
     font-weight: 500;
 }
-
+.nav-item{
+    color: #07b9e1;
+}

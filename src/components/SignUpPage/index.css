@@ -51,6 +51,9 @@
 
 .right-section input{
     padding: 12px 24px 12px 24px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
 }
 
 .right-section button{
@@ -62,6 +65,10 @@
     border-radius: 6px;
     margin-top: 2em;
     cursor: pointer;
+}
+
+.nav-item{
+    color: #065180;
 }
 @media  (max-width:599px) {
     

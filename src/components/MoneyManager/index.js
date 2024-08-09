@@ -124,7 +124,6 @@ class MoneyManager extends Component{
             <div className="money-manager-container">
                 <div className="responsive-container div">
                     <div className="header-container">
-                        <h1 className="heading">Hi</h1>
                         <p  className="header-content">Welcome to your <span className="money-manager-text">Money Manager</span></p>
                     </div>
                    
@@ -141,7 +140,7 @@ class MoneyManager extends Component{
                             <label className="input-label" htmlFor="title">TITLE</label>
                             <input type="text" id="title" className="input" placeholder="title...." name="titileInput" value={titileInput} onChange={this.handleOnChange}/>
                             <label className="input-label" htmlFor="amount">AMOUNT</label>
-                            <input type="text" id="amount" className="input" placeholder="amount...." name="amountInput" value={amountInput} onChange={this.handleOnChange}/>
+                            <input type="number" id="amount" className="input" placeholder="amount...." name="amountInput" value={amountInput} onChange={this.handleOnChange}/>
                             <label className="input-label" htmlFor="select">TYPE</label>
                             <select id="select" className="input" value={optionId} name="optionId" onChange={this.handleOnChange}>
                                 {transactionTypeOptions.map(eachOption =>(

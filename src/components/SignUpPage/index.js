@@ -14,7 +14,13 @@ class SignUp extends Component{
         user_password:'',
         user_phone:'',
         showPaswrd:false,
-        err: "",
+        err: {
+            user_firstname:'',
+            user_email:'',
+            user_password:'',
+            user_phone:''
+        },
+
         registreErr:''
     }
 
@@ -75,13 +81,11 @@ class SignUp extends Component{
     }
 
     onHandleBlur=(e)=>{
-        const {name, value} = e.target
-        this.setState({[name]: value})
-        if(value === ''){
-            this.setState({err:'Required'})
-    }else{
-        this.setState({err:""})
-    }
+        const {name, value} = e.target 
+        this.setState(prevstate =>({
+           err:{...prevstate.err, [name]: value === '' ? 'Required*':''}
+            
+        }))
     }
 
     render(){
@@ -90,35 +94,36 @@ class SignUp extends Component{
             <div className='signUp-page-container'>
                 <div className='left-section'>
                     <h1>SYOFT</h1>
+                    <h4>Access Your Transaction Details</h4>
                 </div>
                 <div className='right-section'>
                     <div className='have-account'>
-                    <p>Already have an Account? <Link to="/login">Login here...</Link></p>
+                    <p>Already have an Account? <Link to="/login" className="nav-item">Login here...</Link></p>
                     </div>
                
                 <div>
                 <form onSubmit={this.handleOnSubmit}>
                 <div>
                     <p><label>ENTER FIRST NAME:</label></p>
-                    <input type='text' name='user_firstname' value={user_firstname} onChange={this.handleOnCahnge}/>
-                    <p className='error-msg'>{err}</p>
+                    <input type='text' name='user_firstname' value={user_firstname} onChange={this.handleOnCahnge} onBlur={this.onHandleBlur}/>
+                    <p className='error-msg'>{err.user_firstname}</p>
                 </div>
                 <div>
                     <p><label>ENTER EMAIL:</label></p>
                     <input type='text' name='user_email' value={user_email} onChange={this.handleOnCahnge} onBlur={this.onHandleBlur}/>
-                    <p className='error-msg'>{err}</p>
+                    <p className='error-msg'>{err.user_email}</p>
                 </div>
                 <div>
                     <p><label>ENTER PASSWORD:</label></p>
                     <input type={showPaswrd ? 'text' : 'password'} name='user_password' value={user_password}  onChange={this.handleOnCahnge} onBlur={this.onHandleBlur}/> <span>
                         {showPaswrd ? <FaEye onClick={this.ontogglePassword}/> : <FaEyeSlash onClick={this.ontogglePassword}/>}
                     </span>
-                    <p className='error-msg'>{err}</p>
+                    <p className='error-msg'>{err.user_password}</p>
                 </div>
                 <div>
                     <p><label>ENTER PHONE NO:</label></p>
                     <input type='text' name='user_phone'  value={user_phone} onChange={this.handleOnCahnge} onBlur={this.onHandleBlur}/>
-                    <p className='error-msg'>{err}</p>
+                    <p className='error-msg'>{err.user_phone}</p>
                 </div>
                 <div>
                     <button type='submit'>Create Account</button>

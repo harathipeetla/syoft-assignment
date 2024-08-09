@@ -59,9 +59,9 @@ class Login extends Component{
                         <p><label>Enter your password:</label></p>
                         <input type='password' name='user_password' value={user_password} onChange={this.handleOnCahnge}/>
                     </div>
-<button type='submit'>Login</button>
+                        <button type='submit'>Login</button>
                 </form>
-                <p className='have-account'>Do not have an Account <Link to="/signup">Register here..</Link></p>
+                <p className='have-account'>Do not have an Account <Link to="/signup" className="nav-item">Register here..</Link></p>
             </div>
         )
     }

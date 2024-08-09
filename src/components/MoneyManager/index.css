@@ -4,12 +4,9 @@
   gap: 2em;
   margin:0 2em 2em 2em;
   overflow: hidden;
+ 
 }
 
-/* .money-manager-container .div{
-    margin-bottom: 32px;
-    margin-top: 32px;
-} */
 
 
 .lower-part{
@@ -55,6 +52,9 @@
     flex-direction: column;
     justify-content: space-between;
    margin-right: 2em;
+   align-items: center;
+  
+  
    
 }
 
@@ -64,10 +64,12 @@
     justify-content: space-around;
     align-items: flex-start;
     height: 424px;
-   
-    border: 1px solid #cbd5e1;
+    border: 1px solid #00070e;
     border-radius: 12px;
-    padding: 24px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    
 }
 
 .transaction-header{
@@ -87,7 +89,7 @@
 .input{
     color: #475569;
     background-color: white;
-    border: 1px solid #475569;
+    border: 1px solid #00060d;
     border-radius: 4px;
     width: 100px;
     height: 40px;
@@ -98,18 +100,19 @@
 }
 
 .button{
-    background-color: #154bec;
+    background-color: #0d0d0d;
     color: white;
     border: none;
     padding: 10px 20px 10px 20px;
     cursor: pointer;
     margin-bottom: 10px;
+    border-radius: 8px;
 }
 
 .history-transactions{
 
     min-height: 326px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #121213;
     border-radius: 12px;
     padding: 12px 24px 12px 24px;
 
